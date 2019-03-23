@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V19</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<script src="js/abc.js"></script>
+
+    <style>
+        table 
+        {
+            width: 92%;
+            font: 17px Calibri;
+			margin-left:60px;
+			
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+		th,td
+		{
+			height:40px;
+		}
+    </style>
+
+
+
+
+
+</head>
+<body onload="createTable()">
+		<div class="container-login100-form-btn m-t-20" style="width:100%; padding-left:50px;">
+					<button class="login100-form-btn1" style="height:30px">
+						<i class="fa fa-home"></i> Home
+						</button> 
+					<button class="login100-form-btn1" style="height:30px" onclick="submit_cart()">
+						<i class="fa fa-bars"></i>	About US
+						</button>
+					<button class="login100-form-btn1" style="height:30px">
+						<i class="fa fa-file-o"></i> Insert Product
+						</button>
+					<button class="login100-form-btn1" style="height:30px">
+							<i class="fa fa-clock-o"></i> Register Customer
+						</button>
+					<button class="login100-form-btn1" style="height:30px">
+							<i class="fa fa fa-folder"></i> Order Details
+						</button>
+					<label style="width:20%; height:30px; text-align:Center; color: #999999;"><i class="fa fa-inbox"></i> Welcome, Sachin Tendulkar</label>
+					<label style="width:17%; height:30px; text-align:Right; color: #999999; "><a href="index.html" class="txt1"><i class="fa fa-power-off"></i> Logout </a></label>
+		</div>
+									
+	<hr>
+	<div style="border:1px solid #999999;width:92%;height:100px;margin-left:60px;">
+	<div style="width:30%;height:100px;float:left;padding: 5px;">
+	<label style="width:90%; height:30px; color: #999999;margin:10px 0px 0px 30px"><i class="fa fa-inbox"></i> Order No. </label><br>
+	<input type="text" name="ex1" style="border:1px solid #999999;margin-left:30px;width:80%;padding-left:10px;color:#666666;font-size:15px;height:30px"/>
+	</div>
+	
+	<div style="width:30%;height:100px;float:left;padding: 5px;">
+	<label style="width:90%; height:30px; color: #999999;margin:10px 0px 0px 30px"><i class="fa fa-inbox"></i> Order Type </label><br>
+	<input style="padding-left:15px;margin:5px 0px 0px 30px" type="Radio" name="radio1"/><label style="width:60px;margin-left:10px;color: #999999" >Sell</label>
+	<input style="padding-left:15px;margin:5px 0px 0px 30px" type="Radio" name="radio1"/><label style="width:60px;margin-left:10px;color: #999999" >Purchase</label>
+	</div>
+	
+	<div style="width:30%;height:100px;float:left;padding: 5px;">
+	<label style="width:90%; height:30px; color: #999999;margin:10px 0px 0px 30px"><i class="fa fa-inbox"></i> Order Date </label><br>
+	<input type="date" name="ex1" style="border:1px solid #999999;margin-left:30px;width:80%;padding-left:10px;color:#666666;font-size:15px;height:30px"/>
+	</div>
+	</div>
+	<br>
+	
+	<div style="width:92%;margin:auto;border:1px solid #999999;visibility:hidden;" id="cont1">
+	
+	</div>
+		
+	
+	<div style="border:1px solid #999999;width:27.5%;height:400px;margin-top:30px;margin-left:60px;float:left;padding: 5px;">
+	<div style="width:30%;height:100px;float:left;">
+	<div style="width:332%;height:50px;background-color:#4272d7;padding:15px;color:white">
+	<i class="fa fa-truck"></i> Select Product
+	</div>
+	
+	<div class="wrap-input100 rs1 validate-input" data-validate="Confirmed Password is required" style="width:315%;margin:30px 10px" >
+						<!--input class="input100" style="height:30px" type="password" name="pass" placeholder="Confirmed Password"-->
+						<select class="input100" style="height:30px;width:100%" style="border: 1px solid #e6e6e6;" id="sproduct" onchange="s_product()">
+						<option value="-1" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Product Name </option>
+						<option value="1" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Laptop </option>
+						<option value="2" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Motherboard </option>
+						<option value="3" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Mouse </option>
+						<option value="4" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Monitor </option>
+						<option value="5" style="border: 1px solid #e6e6e6;background-color: #fff;"  > RAM </option>
+						<option value="6" style="border: 1px solid #e6e6e6;background-color: #fff;"  > SMPS </option>
+						</select>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+						
+						</div>
+						
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:10px">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Product ID" disabled="true"  id="pi" />
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+		</div>
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:30px 10px">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Price" disabled="true" id="pr">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+		</div>
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:30px 10px">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Stock" disabled="true" id="st" >
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+		</div>
+				
+	</div>
+	</div>
+	<div style="border:1px solid #999999;width:27.5%;height:400px;margin-top:30px;margin-left:60px;float:left;padding: 5px;">
+	<div style="width:30%;height:100px;float:left;">
+	<div style="width:332%;height:50px;background-color:#4272d7;padding:15px;color:white">
+	<i class="fa fa-user"></i> Select Customer
+	</div>
+	
+	<div class="wrap-input100 rs1 validate-input" data-validate="Confirmed Password is required" style="width:315%;margin:30px 10px" >
+						<!--input class="input100" style="height:30px" type="password" name="pass" placeholder="Confirmed Password"-->
+						<select class="input100" style="height:30px;width:100%" style="border: 1px solid #e6e6e6;" id="scust" onchange="s_customer()">
+						<option value="-1" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Customer Name </option>
+						<option value="1" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Satyam Computer </option>
+						<option value="2" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Balaji Computer </option>
+						<option value="3" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Zeal Computer </option>
+						<option value="4" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Anupam Electronics </option>
+						<option value="5" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Gayatri Electronics </option>
+						<option value="6" style="border: 1px solid #e6e6e6;background-color: #fff;"  > Karan Computers </option>
+						</select>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+						
+						</div>
+						
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:10px">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Customer ID" disabled="true"  id="ci" />
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+		</div>
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:30px 10px">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Phone" disabled="true" id="cr">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+		</div>
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:30px 10px">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Customer mail Id" disabled="true" id="sr" >
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+	</div>
+	<div style="border:1px solid #999999;width:27.5%;height:400px;margin-top:30px;margin-left:60px;float:left;padding: 5px;">
+	<div style="width:30%;height:100px;float:left;">
+	<div style="width:332%;height:50px;background-color:#4272d7;padding:15px;color:white">
+	<i class="fa fa-cloud"></i> Order Detail
+	</div>
+	<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:10px;visibility:hidden" id="Od1">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Customer ID" disabled="true"  id="di" />
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+	</div>
+		<div class="wrap-input100 rs1 validate-input" data-validate="New Password is required" style="width:315%;margin:30px 10px;visibility:hidden" id="Od2">
+						<input class="input100" style="height:30px" type="text" name="pass" placeholder="Phone" disabled="true" id="dr" />
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+	</div>
+	
+	<button class="login100-form-btn1" style="height:30px;width:150%;visibility:hidden" id="b1" onclick="addRow_new()">
+	<i class="fa fa-shopping-cart"></i> Add to Cart
+	</button> 
+	
+	
+	
+	
+	</div>
+	</div>
+	
+	<div style="height:8%;width:92%;background-color: #4272d7;margin-top:450px;margin-left:60px">
+	<label style="width:90%; height:30px; color:white;margin:15px 0px 0px 30px"><i class="fa fa-shopping-cart"></i> Cart </label>
+	</div>
+	
+  	
+	<div>
+	<table id="empTable1">
+	<tbody>
+	<tr>
+	<th>Serial No</th>
+	<th>Product Name</th>
+	<th>Price</th>
+	<th style="border:0px;"></th>
+	<th style="border:0px;">Quantity</th>
+	<th style="border:0px;"></th>
+	<th>Action</th>
+	<th style="width:100px">Total</th>
+	</tr>
+	</tbody>
+	</table>
+	<table>
+	<tr>
+	<td>Total</td>
+	<td style="width:100px" id="total1"></td>
+	</tr>
+	</table>
+	</div>
+	<br>
+	<br>
+	
+
+</body>
+
+</html>
