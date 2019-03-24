@@ -9,6 +9,17 @@ Welcome to Mehar Family Shrimad Bhagwat Katha
   <meta name="author" content="John Doe">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  
+<script>
+function myFunction() {
+  var x = "Total Width: " + screen.width + "px";
+  var y = "Total Height: " + screen.height + "px";
+ alert(x + " " + y);
+}
+
+
+</script>  
+  
 <style>
 body{
 	background-image: url('images/8.jpg');
@@ -101,7 +112,14 @@ body{
   
  a{
 	
-	font-size: 18px;
+	
+ }
+
+ .footer {
+
+   color: transparent;
+   text-align: center;
+   font-size: 18px;
 	text-decoration:None;
 	font-weight: bold;
 	position:relative;
@@ -109,26 +127,14 @@ body{
 	height: 100px;
 	padding:30px;
 	margin-left:30%;
-	
 	border: 1px solid black;
- }
-
- .footer {
-
-   color: transparent;
-   text-align: center;
 }
 
 </style>
 </head>
-<body>
-<script>
-function myFunction() {
-  var x = "Total Width: " + screen.width + "px";
- alert(x);
-}
-</script>
-<a class="footer" href="Desc_2.html">fdgdgdgdgd वापस होने के लिए </a>
+<body onload="body_load()" id="body1">
+
+<button class="footer" onclick="myFunction()">Try it</button>
 <button onclick="myFunction()">Try it</button>
 
 </body>
