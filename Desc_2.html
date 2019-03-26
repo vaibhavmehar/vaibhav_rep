@@ -9,6 +9,7 @@ Welcome to Mehar Family Shrimad Bhagwat Katha
   <meta name="author" content="John Doe">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  
 <script>
 function myFunction() {
   var x = "Total Width: " + screen.width + "px";
@@ -19,36 +20,20 @@ function myFunction() {
 function body_load()
 {
 	 var body_temp = document.getElementById('body1');
-	 if(screen.height <= 540)
+	 if(screen.height < 540 )
 	 {
-		body_temp.setAttribute('style','height:395%');
+		body_temp.setAttribute('style','height:400%');
 	 }
-	 else if(screen.height > 540 && screen.height <= 570)
-	 {
-		body_temp.setAttribute('style','height:405%');
-	 }
-	 else if(screen.height > 570 && screen.height <= 640)
-	 {
-		body_temp.setAttribute('style','height:410%');
-	 }
-	 else if(screen.height > 640 && screen.height <= 1000 && screen.width <=500 )
-	 {
-		body_temp.setAttribute('style','height:415%');
-	 }
-	 else
-	 {
-		body_temp.setAttribute('style','height:1230%');
-	 }
+	 
 }
 
-</script>   
+</script>  
   
-  
-  
-  
+ 
 <style>
 body{
 	background-image: url('images/12.jpg');
+	height:1250%;
 	width:100%;
 	background-repeat: no-repeat;
 	background-size:100%
