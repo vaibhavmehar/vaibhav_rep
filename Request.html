@@ -1,0 +1,160 @@
+<html>
+<title>
+Welcome to Mehar Family Shrimad Bhagwat Katha
+</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<script>
+function myFunction() {
+  var x = "Total Width: " + screen.width + "px";
+  var y = "Total Height: " + screen.height + "px";
+ alert(x + " vaibhav " + y);
+}
+
+function body_load()
+{
+	 var body_temp = document.getElementById('body1');
+	 if(screen.height <= 540)
+	 {
+		body_temp.setAttribute('style','height:390%');
+	 }
+	 else if(screen.height > 540 && screen.height <= 570)
+	 {
+		body_temp.setAttribute('style','height:400%');
+	 }
+	 else if(screen.height > 570 && screen.height <= 640)
+	 {
+		body_temp.setAttribute('style','height:405%');
+	 }
+	 else if(screen.height > 640 && screen.height <= 1000 && screen.width <=500 )
+	 {
+		body_temp.setAttribute('style','height:410%');
+	 }
+	 else
+	 {
+		body_temp.setAttribute('style','height:1500%');
+	 }
+}
+
+</script>  
+  
+ 
+<style>
+body{
+	background-image: url('images/15.jpg');
+	width:100%;
+	background-repeat: no-repeat;
+	background-size:100%
+}
+
+.button {
+  border-radius: 100px;
+  background-color: Red;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 500px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 50px;
+   
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: ' \00bb  22 अप्रैल से 30 अप्रैल 2019';
+  opacity: 0;
+  top: 0;
+  right: 0px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+<!---->
+.button1 {
+  border-radius: 100px;
+  background-color: Red;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 27px;
+  padding: 10px;
+  width: 700px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 50px;
+   
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: ' \00bb  कोटरा रोड, राजीव नगर, रायगढ़ (छत्तीसगढ़)';
+  opacity: 0;
+  top: 0;
+  right: 0px;
+  transition: 0.5s;
+}
+समस्त in English.
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+  }
+  
+ a{
+	font-size: 18px;
+	text-decoration:None;
+	font-weight: bold;
+ }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+   font-size:48px;
+}
+</style>
+</head>
+<body onload="body_load()" id="body1">
+<a class="footer" href="index.html"> वापस होने के लिए </a>
+
+
+</body>
+</html>
