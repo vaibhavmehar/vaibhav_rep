@@ -20,17 +20,17 @@ function myFunction() {
 function body_load()
 {
 	 var body_temp = document.getElementById('body1');
-	 if(screen.height <= 540)
+	 if(screen.height <= 540) <!-- Samsung mobile >
 	 {
-		body_temp.setAttribute('style','height:450%');
+		body_temp.setAttribute('style','height:470%');
 	 }
 	 else if(screen.height > 540 && screen.height <= 570)
 	 {
-		body_temp.setAttribute('style','height:460%');
+		body_temp.setAttribute('style','height:490%');
 	 }
 	 else if(screen.height > 570 && screen.height <= 640)
 	 {
-		body_temp.setAttribute('style','height:465%');
+		body_temp.setAttribute('style','height:470%');
 	 }
 	 else if(screen.height > 640 && screen.height <= 1000 && screen.width <=500 )
 	 {
@@ -155,8 +155,6 @@ body{
 </head>
 <body onload="body_load()" id="body1">
 <a class="footer" href="index.html"> वापस होने के लिए </a>
-<button onclick="myFunction()">click</button>
-
 
 </body>
 </html>
