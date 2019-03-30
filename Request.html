@@ -43,6 +43,14 @@ function body_load()
 	 }
 }
 
+function body_load1()
+{
+	 var body_temp = document.getElementById('body1');
+	 var page_height = (11200/screen.height)*100;		
+	 body_temp.setAttribute('style','height:' + page_height + "%");
+	
+}
+
 </script>  
   
  
@@ -153,7 +161,7 @@ body{
 }
 </style>
 </head>
-<body onload="body_load()" id="body1">
+<body onload="body_load1()" id="body1">
 <a class="footer" href="index.html"> वापस होने के लिए </a>
 
 </body>
