@@ -45,11 +45,22 @@ function body_load()
 
 function body_load1()
 {
-	 var body_temp = document.getElementById('body1');
-	 var page_height = (8000/screen.height);	
-     var page_height1 = page_height * screen.height;
-
-	 body_temp.setAttribute('style','height:' + page_height1 + "px");
+	 if(screen.height > screen.width)
+	 {
+		var body_temp = document.getElementById('body1');
+		var page_height = (8000/screen.height);		
+		var page_height1 = page_height * screen.height;
+		body_temp.setAttribute('style','height:' + page_height1 + "px");
+	 }
+	 else
+	 {
+		var body_temp = document.getElementById('body1');
+		var page_height = (9500/screen.height);		
+		var page_height1 = page_height * screen.height;
+		body_temp.setAttribute('style','height:' + page_height1 + "px");
+	 
+	 }
+	
 	
 }
 
