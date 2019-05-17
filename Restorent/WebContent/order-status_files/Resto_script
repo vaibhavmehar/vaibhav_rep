@@ -1,0 +1,6 @@
+function encodeValue(str)
+{
+	
+	//return str.replace(" ","%20").replace("&","%26").replace("+","%2B").replace("%","%25");
+	return str.replace("&","%26").replace("%","%25");
+}
